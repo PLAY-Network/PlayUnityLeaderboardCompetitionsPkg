@@ -40,16 +40,17 @@
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns><see cref="T:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionResponseData"/></returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionByIdAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionByIdAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competition data by ID.
             Resulting Data contains competition description fields like id, name, and leaderboards.
             </summary>
             <param name="id">The unique identifier of the leaderboard competition to retrieve.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>LeaderboardCompetitionResponseData object that contains the competition details and leaderboards.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByIdsAsync(System.Collections.Generic.List{System.String},System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByIdsAsync(System.Collections.Generic.List{System.String},System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competitions by a list of IDs.
             The method can be filtered with additional optional parameters like limit, startAfter, and ignoreTimestamp.
@@ -59,19 +60,21 @@
             <param name="limit">Optional: The maximum number of leaderboard competitions to retrieve.</param>
             <param name="startAfter">Optional: A number to start the retrieval after, based on the 'updatedAt' property.</param>
             <param name="ignoreTimestamp">Optional: If true, the competition's time constraints will be ignored.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionsResponseData object with competition details.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionByRequestNameAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionByRequestNameAsync(System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves a leaderboard competition by its request name.
             </summary>
             <param name="requestName">The request name used to find the leaderboard competition.</param>
             <param name="appId">The application ID associated with the leaderboard competition.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionResponseData object with competition details.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByRequestNamesAsync(System.Collections.Generic.List{System.String},System.String,System.Int32,System.Nullable{System.Int64},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByRequestNamesAsync(System.Collections.Generic.List{System.String},System.String,System.Int32,System.Nullable{System.Int64},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competition entries by a list of request names.
             The method can be filtered with additional optional parameters like startAfter and ignoreTimestamp.
@@ -81,10 +84,11 @@
             <param name="limit">The maximum number of leaderboard competitions to retrieve.</param>
             <param name="startAfter">Optional: A number to start the retrieval after, based on the 'updatedAt' property.</param>
             <param name="ignoreTimestamp">Optional: If true, the competition's time constraints will be ignored.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionsResponseData object with competition details.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByAppIdsAsync(System.Collections.Generic.List{System.String},System.Int32,System.Nullable{System.Int64},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByAppIdsAsync(System.Collections.Generic.List{System.String},System.Int32,System.Nullable{System.Int64},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competition entries by a list of application IDs.
             The method can be filtered with additional optional parameters like startAfter and ignoreTimestamp.
@@ -93,10 +97,11 @@
             <param name="limit">The maximum number of leaderboard competitions to retrieve.</param>
             <param name="startAfter">Optional: A number to start the retrieval after, based on the 'updatedAt' property.</param>
             <param name="ignoreTimestamp">Optional: If true, the competition's time constraints will be ignored.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionsResponseData object with competition details.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByTagsAsync(System.String,System.Collections.Generic.List{System.String},System.Int32,System.Nullable{System.Int64},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionsByTagsAsync(System.String,System.Collections.Generic.List{System.String},System.Int32,System.Nullable{System.Int64},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competition entries by a list of tags.
             The method can be filtered with additional optional parameters like startAfter and ignoreTimestamp.
@@ -106,18 +111,29 @@
             <param name="limit">The maximum number of leaderboard competitions to retrieve.</param>
             <param name="startAfter">Optional: A number to start the retrieval after, based on the 'updatedAt' property.</param>
             <param name="ignoreTimestamp">Optional: If true, the competition's time constraints will be ignored.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionsResponseData object with competition details.</returns>
         </member>
-        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionEntriesAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.GetLeaderboardCompetitionEntriesAsync(System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Asynchronous method that retrieves leaderboard competition entries by competition ID.
             This method also returns the competition and leaderboard data associated with the entries.
             </summary>
             <param name="appId">The application identifier associated with the leaderboard competition.</param>
             <param name="id">The identifier of the leaderboard competition.</param>
+            <param name="withUserData">Flag to include user data in the response. Default is false.</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns>A task that represents the asynchronous operation, containing a LeaderboardCompetitionEntriesResponseData object with competition, leaderboard, and entry details.</returns>
+        </member>
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsModule.ParticipateAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Participate in a leaderboards competition. If the user is already participating, the participation will be updated.
+            </summary>
+            <param name="id">Identifier for the leaderboards competition</param>
+            <param name="leaderboardId">Identifier for the leaderboard to participate in</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>LeaderboardCompetitionResponseData object that contains the competition details and leaderboards.</returns>
         </member>
         <member name="T:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionData">
             <summary>
@@ -250,6 +266,40 @@
             </summary>
             <returns>A string that represents the current LeaderboardCompetitionEntry.</returns>
         </member>
+        <member name="T:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData">
+            <summary>
+            Represents the data structure of a leaderboard competition participation within the READYgg ecosystem.
+            This class serves as a Data Transfer Object (DTO) that contains details about user participation in leaderboards.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData.id">
+            <summary>
+            Unique identifier of the leaderboard competition.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData.participationLeaderboardIds">
+            <summary>
+            List of leaderboard ids in which the user is participating.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData.createdAt">
+            <summary>
+             Date and time when the leaderboard competition participation was created in milliseconds since Jan 1, 1970 UTC.
+            Automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData.updatedAt">
+            <summary>
+            Date and time when the leaderboard competition participation was last updated in milliseconds since Jan 1, 1970 UTC.
+            Automatically populated by the backend.
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionParticipationData.ToString">
+            <summary>
+            Creates a string representation of the LeaderboardCompetitionEntry.
+            </summary>
+            <returns>A string that represents the current LeaderboardCompetitionEntry.</returns>
+        </member>
         <member name="T:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionEntriesResponseData">
             <summary>
             Response data to provide the leaderboard competition with the leaderboards included
@@ -281,6 +331,11 @@
             The leaderboards data list included in the competition
             </summary>
         </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionResponseData.participations">
+            <summary>
+            The user participation information when the requests 'withUserData' flag is set to true.
+            </summary>
+        </member>
         <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionResponseData.ToString">
             <summary>
             Creates a string representation of the LeaderboardCompetitionResponseData.
@@ -300,6 +355,11 @@
         <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsResponseData.leaderboards">
             <summary>
             The leaderboards data list included in the competition
+            </summary>
+        </member>
+        <member name="F:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsResponseData.participations">
+            <summary>
+            The user participation information when the requests 'withUserData' flag is set to true.
             </summary>
         </member>
         <member name="M:RGN.Modules.LeaderboardCompetitions.LeaderboardCompetitionsResponseData.ToString">
