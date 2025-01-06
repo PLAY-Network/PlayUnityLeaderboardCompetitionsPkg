@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.getready.rgn.leaderboard.competitions",
+  "name": "io.play.unity.leaderboard.competitions",
   "displayName": "PLAY SDK. Leaderboard Competitions",
   "version": "0.16.0",
   "unity": "2020.3",
@@ -30,8 +30,8 @@
   ],
   "samples": [],
   "dependencies": {
-    "io.getready.rgn.core": "0.16.0",
-    "io.getready.rgn.userprofile": "0.16.0",
-    "io.getready.rgn.leaderboard": "0.16.0"
+    "io.play.unity.core": "0.16.0",
+    "io.play.unity.userprofile": "0.16.0",
+    "io.play.unity.leaderboard": "0.16.0"
   }
 }
