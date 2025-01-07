@@ -1,1 +1,2 @@
-# Play SDK Leaderboard Competitions
+# Play SDK LeaderboardCompetitions
+Package version: 0.16.0-dev.10
